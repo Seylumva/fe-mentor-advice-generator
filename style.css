@@ -1,0 +1,101 @@
+/* container
+advice
+advice-number
+advice-number__id
+advice-quote
+advice-quote__text
+advice-divider
+advice-roll */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+:root {
+  --primary-cyan: hsl(193, 38%, 86%);
+  --primary-green: hsl(150, 100%, 66%);
+  --neutral-light: rgba(78, 93, 115, 0.4);
+  --neutral--dark: hsl(217, 19%, 24%);
+  --quote-font-size: 28px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Manrope", sans-serif;
+  background: var(--neutral--dark);
+  color: var(--primary-cyan);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  padding: 1rem;
+}
+
+.advice {
+  position: relative;
+  background: var(--neutral-light);
+
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 112px;
+}
+
+.advice-number {
+  color: var(--primary-green);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin: 1rem 0;
+  font-size: 0.8rem;
+}
+
+.advice-quote {
+  font-size: var(--quote-font-size);
+  margin-bottom: 1.5rem;
+}
+
+.advice-divider img {
+  margin-bottom: 2rem;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+.advice-roll {
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  background: var(--primary-green);
+  border: none;
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: background 250ms ease, box-shadow 250ms ease-out;
+}
+
+.advice-roll:hover {
+  background: hsl(150, 100%, 72%);
+  box-shadow: 0 0 20px hsl(150, 100%, 72%);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
